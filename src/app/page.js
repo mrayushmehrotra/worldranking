@@ -1,5 +1,7 @@
 "use client"
+import "./globals.css"
 import styles from "./page.module.css"
+
 import { useEffect, useState } from 'react';
 
 function CountryTable() {
@@ -34,13 +36,15 @@ function CountryTable() {
   };
 
   return (
+ 
     <div className={styles.div}>
+      
       <input className={styles.search}
         type="text"
-        placeholder="Search country"
+        placeholder="&#128269;"
         value={searchQuery}
         onChange={handleSearchChange}
-      /><br /><br />
+        /><br /><br />
 
       <table className={styles.table}>
         <thead>
@@ -53,14 +57,15 @@ function CountryTable() {
         <tbody>
           {filteredCountries.map((country, index) => (
             <tr key={index}>
-              <td className={styles.td}><img className={styles.img} src={country.flag} alt={`${country.name} Flag`} /></td>
               <td className={styles.td}>{country.name}</td>
+              <td className={styles.td}><img className={styles.img} src={country.flag} alt={`${country.name} Flag`} /></td>
               <td className={styles.td}>{country.population}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+      
   );
 }
 

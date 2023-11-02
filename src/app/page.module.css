@@ -1,4 +1,6 @@
+
 .div{
+  margin-top:2%;
   justify-content:center;
   text-align:center;
   padding:2px;
@@ -12,15 +14,13 @@
 }
 
 .th, .td {
-  border: 1px solid black;
+  border: 1px solid rgba(255, 255, 255, 0.452);
   padding: 8px;
   text-align: center;
  
 }
 
-.th {
-  background-color: #f2f2f2;
-}
+
 
 .img {
   height:20px;
@@ -28,9 +28,16 @@
 }
 
 .search{
+  background-color: rgb(27, 25, 25);
   text-align: center;
   justify-content:center;
   height:2rem;
   width:10rem;
-  border:3px solid black;
+  color:white;
+  font-weight: bolder;
+  border:3px solid rgba(255, 255, 255, 0.452);
+}
+
+.search:hover{
+  transform:translateX(-10px)
 }
